@@ -1,0 +1,27 @@
+module_name: flip_control
+parameters:
+- group: Flip Control
+  definitions:
+    FLIP_ROLL_CW:
+      description:
+        short: Flip roll rate clockwise
+        long: Roll rate used during flip clockwise maneuver in deg/s.
+      type: float
+      default: 400.0
+      unit: deg/s
+      min: 0.0
+      max: 1000.0
+      decimal: 1
+      increment: 10
+- group: Flip Control RC
+  definitions:
+    FLIP_RC_CHAN:
+      description:
+        short: RC channel for flip trigger
+        long: |-
+          RC channel number used to trigger a flip (1-18).
+          Set to 0 to disable RC triggering.
+      type: int32
+      default: 0
+      min: 0
+      max: 18

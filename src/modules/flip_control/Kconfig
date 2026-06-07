@@ -1,0 +1,12 @@
+menuconfig MODULES_FLIP_CONTROL
+        bool "flip_control"
+        default n
+        ---help---
+                Enable support for flip_control
+
+menuconfig USER_FLIP_CONTROL
+        bool "flip_control running as userspace module"
+        default n
+        depends on BOARD_PROTECTED && MODULES_FLIP_CONTROL
+        ---help---
+                Put flip_control in userspace memory
